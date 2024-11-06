@@ -7,7 +7,7 @@ import { type PropsWithChildren } from 'react';
  */
 export default function Root({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +18,6 @@ export default function Root({ children }: PropsWithChildren) {
           However, body scrolling is often nice to have for mobile web. If you want to enable it, remove this line.
         */}
         <ScrollViewStyleReset />
-
         {/* Using raw CSS styles as an escape-hatch to ensure the background color never flickers in dark-mode. */}
         <style dangerouslySetInnerHTML={{ __html: responsiveBackground }} />
         {/* Add any additional <head> elements that you want globally available on web... */}
@@ -32,6 +31,26 @@ const responsiveBackground = `
 body {
   background-color: #fff;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #181815;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #D2C682;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000;

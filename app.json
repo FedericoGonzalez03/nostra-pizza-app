@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "nosstra-pizza",
+    "name": "Nostra Pizza",
     "slug": "nosstra-pizza",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/nosstra-pizza-logo.png",
+    "scheme": "xfefo",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/nosstra-pizza-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,20 +17,29 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/nosstra-pizza-logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.xfefo.nostrapizza"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/nosstra-pizza-logo.png",
+      "name": "Nostra Pizza",
+      "title": "Nostra Pizza",
+      "description": "Nostra Pizza is a pizza delivery app"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "774dc957-3c0c-4e5c-aff4-facaf3999d08"
+      }
     }
   }
 }
