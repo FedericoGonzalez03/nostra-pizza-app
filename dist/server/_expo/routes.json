@@ -1,0 +1,106 @@
+{
+  "apiRoutes": [],
+  "htmlRoutes": [
+    {
+      "file": "./index.tsx",
+      "page": "/index",
+      "namedRegex": "^/(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/menu.tsx",
+      "page": "/(tabs)/menu",
+      "namedRegex": "^(?:/\\(tabs\\))?/menu(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/cart.tsx",
+      "page": "/(tabs)/cart",
+      "namedRegex": "^(?:/\\(tabs\\))?/cart(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./store.tsx",
+      "page": "/store",
+      "namedRegex": "^/store(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./order.tsx",
+      "page": "/order",
+      "namedRegex": "^/order(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./login.tsx",
+      "page": "/login",
+      "namedRegex": "^/login(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./admin.tsx",
+      "page": "/admin",
+      "namedRegex": "^/admin(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./styles.ts",
+      "page": "/styles",
+      "namedRegex": "^/styles(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./signup.tsx",
+      "page": "/signup",
+      "namedRegex": "^/signup(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./(tabs)/options.tsx",
+      "page": "/(tabs)/options",
+      "namedRegex": "^(?:/\\(tabs\\))?/options(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "expo-router/build/views/Sitemap.js",
+      "page": "/_sitemap",
+      "namedRegex": "^/_sitemap(?:/)?$",
+      "routeKeys": {},
+      "generated": true
+    },
+    {
+      "file": "./types/cartTypes.ts",
+      "page": "/types/cartTypes",
+      "namedRegex": "^/types/cartTypes(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./types/authTypes.ts",
+      "page": "/types/authTypes",
+      "namedRegex": "^/types/authTypes(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./slices/cartReducer.ts",
+      "page": "/slices/cartReducer",
+      "namedRegex": "^/slices/cartReducer(?:/)?$",
+      "routeKeys": {}
+    },
+    {
+      "file": "./slices/authReducer.ts",
+      "page": "/slices/authReducer",
+      "namedRegex": "^/slices/authReducer(?:/)?$",
+      "routeKeys": {}
+    }
+  ],
+  "notFoundRoutes": [
+    {
+      "file": "./+not-found.tsx",
+      "page": "/+not-found",
+      "namedRegex": "^(?:/(?<notfound>.+?))?(?:/)?$",
+      "routeKeys": {
+        "notfound": "not-found"
+      }
+    }
+  ]
+}

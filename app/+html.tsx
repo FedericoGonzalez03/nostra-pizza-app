@@ -1,5 +1,5 @@
-import { ScrollViewStyleReset } from 'expo-router/html';
-import { type PropsWithChildren } from 'react';
+import { ScrollViewStyleReset } from 'expo-router/html'
+import { type PropsWithChildren } from 'react'
 
 /**
  * This file is web-only and used to configure the root HTML for every web page during static rendering.
@@ -9,9 +9,13 @@ export default function Root({ children }: PropsWithChildren) {
   return (
     <html lang="es">
       <head>
+        {/*<title>Prueba</title>*/}
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
         {/*
           Disable body scrolling on web. This makes ScrollView components work closer to how they do on native.
@@ -24,7 +28,7 @@ export default function Root({ children }: PropsWithChildren) {
       </head>
       <body>{children}</body>
     </html>
-  );
+  )
 }
 
 const responsiveBackground = `
@@ -42,7 +46,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #1f1f1f;
+  background-color: #F5F5DC;
   border-radius: 10px;
 }
 
@@ -55,4 +59,4 @@ body {
   body {
     background-color: #000;
   }
-}`;
+}`

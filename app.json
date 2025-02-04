@@ -1,11 +1,14 @@
 {
   "expo": {
+    "newArchEnabled": true,
     "name": "Nostra Pizza",
     "slug": "nosstra-pizza",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/nosstra-pizza-logo.png",
-    "scheme": "xfefo",
+    "platforms": ["ios", "android", "web"],
+    "scheme": "nostrapizza",
+    "appAuthRedirectScheme": "nostrapizza",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/nosstra-pizza-logo.png",
@@ -13,26 +16,46 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xfefo.nostrapizza"
     },
     "android": {
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/nosstra-pizza-logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.xfefo.nostrapizza"
+      "package": "com.xfefo.nostrapizza",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "nostrapizza",
+              "host": "oauthredirect"
+            },
+            {
+              "scheme": "nostrapizza",
+              "host": "checkout",
+              "pathPrefix": "/success"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "web": {
+      "build": {
+        "publicPath": "/"
+      },
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/nosstra-pizza-logo.png",
       "name": "Nostra Pizza",
       "title": "Nostra Pizza",
       "description": "Nostra Pizza is a pizza delivery app"
     },
-    "plugins": [
-      "expo-router"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     },

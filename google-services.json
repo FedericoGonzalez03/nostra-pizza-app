@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "483849855913",
+    "project_id": "nostra-pizza-app",
+    "storage_bucket": "nostra-pizza-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483849855913:android:039c95d89c11f411409ab8",
+        "android_client_info": {
+          "package_name": "com.xfefo.nostrapizza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483849855913-q881ijqs3lcabcudk810n1fsr862tg9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xfefo.nostrapizza",
+            "certificate_hash": "78dfef5ebb7f052b0e3ed9cad0e254ce247b98aa"
+          }
+        },
+        {
+          "client_id": "483849855913-sgffhgt317d2e3969dtqm7eqa5u2904v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSOVZqrd2uZjIycw-klY4ZGtBNzcyhJGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483849855913-sgffhgt317d2e3969dtqm7eqa5u2904v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

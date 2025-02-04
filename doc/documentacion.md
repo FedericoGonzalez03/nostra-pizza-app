@@ -1,23 +1,39 @@
 # Nostra Pizza - Aplicación móvil y web
 
 ## Dependencias
-* expo
-* redux
-* react-redux
-* react-navigation
-* react-native-paper 
-* react-native-image-picker
-* react-native-full-responsive
+
+- expo
+- redux
+- react-redux
+- react-navigation
+- react-native-paper
+- react-native-image-picker
+- react-native-full-responsive
 
 ## Amazon Web Services
-> En uso desde el 6 de Noviembre de 2024. Cuenta: 03.federico.gonzalez@gmail.com - federicogs03  
+
+> En uso desde el 6 de Noviembre de 2024. Cuenta: 03.federico.gonzalez@gmail.com - federicogs03
+
 ### Lambda
+
 En Amazon Lambda están hosteadas las APIs que consume la aplicación.
+
 ### RDS
+
 En Amazon RDS está hosteada la base de datos Postgres 16.4 que usa la aplicación con la siguiente estructura:
 
-``` sql
+```sql
 CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password_hash VARCHAR(255),
+    is_guest BOOLEAN,
+    google_id VARCHAR(100),
+    created_at TIMESTAMPTZ
+);
+
+CREATE TABLE user_adresses (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
     email VARCHAR(100) UNIQUE,
@@ -91,5 +107,11 @@ CREATE TABLE order_details (
     quantity INTEGER,
     unit_price NUMERIC(10,2),
     total NUMERIC
+);
+
+CREATE TABLE order_details_flavours (
+    order_detail_id INTEGER REFERENCES order_details(id),
+    flavour_id INTEGER REFERENCES flavour(id),
+    PRIMARY KEY (order_detail_id, flavour_id)
 );
 ```

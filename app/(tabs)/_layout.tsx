@@ -1,9 +1,21 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs, useRouter } from 'expo-router'
+import React, { useEffect } from 'react'
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon'
+import { useSelector } from 'react-redux'
+import { RootState } from '../store'
 
 export default function TabLayout() {
+
+  const auth = useSelector((state: RootState) => state.auth);
+
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!auth.isGuest && !auth.isAuthenticated) {
+      router.push('/login')
+    }
+  }, [auth])
 
   return (
     <>
@@ -15,22 +27,17 @@ export default function TabLayout() {
           tabBarStyle: {
             backgroundColor: '#1f1f1f',
           },
-        }}>
-        <Tabs.Screen
-          name="index"
-          options={{
-            title: '',
-            tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-            ),
-          }}
-        />
+        }}
+      >
         <Tabs.Screen
           name="menu"
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name={focused ? 'pizza' : 'pizza-outline'} color={color} />
+              <TabBarIcon
+                name={focused ? 'pizza' : 'pizza-outline'}
+                color={color}
+              />
             ),
           }}
         />
@@ -39,10 +46,26 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name={focused ? 'cart' : 'cart-outline'} color={color} />
+              <TabBarIcon
+                name={focused ? 'cart' : 'cart-outline'}
+                color={color}
+              />
             ),
           }}
         />
-      </Tabs></>
-  );
+        <Tabs.Screen
+          name="options"
+          options={{
+            title: '',
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? 'options' : 'options-outline'}
+                color={color}
+              />
+            ),
+          }}
+        />
+      </Tabs>
+    </>
+  )
 }

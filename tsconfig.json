@@ -4,19 +4,18 @@
     "strict": true,
     "noImplicitAny": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
     "sourceMap": true,
     "jsx": "react-native",
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-, "app/styles.ts"  ]
+    "expo-env.d.ts",
+    "app/styles.ts"
+  ]
 }
